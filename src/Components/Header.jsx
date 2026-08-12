@@ -1,7 +1,7 @@
 import Buttons from "./UI/Buttons";
 import { motion } from "motion/react";
 
-// Fon uchun soxta kod qatorlari (chap va o'ng blok)
+// Fon uchun soxta kod qatorlari
 const leftCode = [
   "const app = (req, res, next) => {",
   "  const isAuth = req.headers.authorization;",
@@ -47,7 +47,6 @@ const rightCode = [
   "}",
 ];
 
-
 function CodeColumn({ lines, align = "left" }) {
   return (
     <pre
@@ -63,11 +62,21 @@ function CodeColumn({ lines, align = "left" }) {
 export default function DeveloperHero() {
   return (
     <div className="relative w-full min-h-screen bg-[#040608] overflow-hidden flex items-center justify-center">
-      <div className="absolute inset-0 flex justify-between px-6 py-10 opacity-70 pointer-events-none">
-        <CodeColumn lines={leftCode} align="left" />
-        <CodeColumn lines={rightCode} align="right" />
+
+      {/* CODE BACKGROUND */}
+      <div className="absolute inset-0 flex justify-between px-6 py-10 opacity-70 pointer-events-none overflow-hidden">
+
+        <div className="hidden sm:block">
+          <CodeColumn lines={leftCode} align="left" />
+        </div>
+
+        <div className="hidden sm:block">
+          <CodeColumn lines={rightCode} align="right" />
+        </div>
+
       </div>
 
+      {/* DARK RADIAL BACKGROUND */}
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
@@ -76,41 +85,175 @@ export default function DeveloperHero() {
         }}
       />
 
+      {/* TOP LINE */}
       <motion.div
         initial={{ scaleX: 0 }}
-  animate={{ scaleX: 1 }}
-  transition={{ duration: 0.5, ease: "easeOut" }}
-      className="absolute top-64 left-1/2 -translate-x-1/2 w-[420px] h-1 bg-gradient-to-r from-transparent via-cyan-400/60 to-transparent" />
-      <motion.div 
-       initial={{ scaleX: 0 }}
-  whileInView={{ scaleX: 1 }}
-  transition={{ duration: 0.5, ease: "easeOut" }}
-      className="absolute bottom-24 left-1/2 -translate-x-1/2 w-[420px] h-3 bg-gradient-to-r from-transparent via-cyan-400/60 to-transparent" />
+        animate={{ scaleX: 1 }}
+        transition={{ duration: 0.5, ease: "easeOut" }}
+        className="
+          absolute
+          top-64
+          left-1/2
+          -translate-x-1/2
+          w-[420px]
+          max-w-[80%]
+          h-1
+          bg-gradient-to-r
+          from-transparent
+          via-cyan-400/60
+          to-transparent
+        "
+      />
 
+      {/* BOTTOM LINE */}
       <motion.div
-       initial={{ opacity: 0, y: 20 }}
-       animate={{ opacity: 1, y: 0 }}
-       transition={{ duration: 0.5 }}
-      className="relative z-10 flex flex-col items-center text-center px-4">
-     <div className="flex items-center justify-center gap-5">
-          <h2 className=" text-8xl font-bold  mt-6 bg-gradient-to-l from-cyan-400 to-white bg-clip-text text-transparent">Front-</h2>
-        <h2 className=" text-8xl font-bold  mt-6 bg-gradient-to-r from-cyan-400 to-white bg-clip-text text-transparent">End</h2>
-        </div>
-        <h2 className=" text-8xl font-bold  mt-6 bg-gradient-to-r from-white via-cyan-400 to-white bg-clip-text text-transparent">Developer</h2>
+        initial={{ scaleX: 0 }}
+        whileInView={{ scaleX: 1 }}
+        transition={{ duration: 0.5, ease: "easeOut" }}
+        className="
+          absolute
+          bottom-24
+          left-1/2
+          -translate-x-1/2
+          w-[420px]
+          max-w-[80%]
+          h-3
+          bg-gradient-to-r
+          from-transparent
+          via-cyan-400/60
+          to-transparent
+        "
+      />
 
-        <div className="mt-5 flex flex-col items-center ">
-          <span className="text-[12px] tracking-[0.2em] text-cyan-500/90 ">
+      {/* MAIN CONTENT */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        className="
+          relative
+          z-10
+          flex
+          flex-col
+          items-center
+          text-center
+          px-4
+          w-full
+        "
+      >
+
+        {/* FRONT-END */}
+        <div className="flex items-center justify-center gap-2 sm:gap-5">
+
+          <h2
+            className="
+              text-5xl
+              sm:text-7xl
+              md:text-8xl
+              font-bold
+              mt-6
+              bg-gradient-to-l
+              from-cyan-400
+              to-white
+              bg-clip-text
+              text-transparent
+            "
+          >
+            Front-
+          </h2>
+
+          <h2
+            className="
+              text-5xl
+              sm:text-7xl
+              md:text-8xl
+              font-bold
+              mt-6
+              bg-gradient-to-r
+              from-cyan-400
+              to-white
+              bg-clip-text
+              text-transparent
+            "
+          >
+            End
+          </h2>
+
+        </div>
+
+        {/* DEVELOPER */}
+        <h2
+          className="
+            text-5xl
+            sm:text-7xl
+            md:text-8xl
+            font-bold
+            mt-2
+            sm:mt-6
+            bg-gradient-to-r
+            from-white
+            via-cyan-400
+            to-white
+            bg-clip-text
+            text-transparent
+            whitespace-nowrap
+          "
+        >
+          Developer
+        </h2>
+
+        {/* BOTTOM CONTENT */}
+        <div className="mt-5 flex flex-col items-center">
+
+          <span
+            className="
+              text-[10px]
+              sm:text-[12px]
+              tracking-[0.15em]
+              sm:tracking-[0.2em]
+              text-cyan-500/90
+            "
+          >
             SCROLL TO CONTINUE
           </span>
-        <p className=" font-mono text-cyan-400/90 text-xl ">
-          {"// Building digital experiences at light speed"}
-        </p>
-          <div className="w-6 h-10 rounded-full border border-cyan-400/60 animate-bounce flex items-start justify-center p-1">
+
+          <p
+            className="
+              font-mono
+              text-cyan-400/90
+              text-sm
+              sm:text-xl
+              mt-2
+              px-2
+            "
+          >
+            {"// Building digital experiences at light speed"}
+          </p>
+
+          {/* SCROLL ICON */}
+          <div
+            className="
+              w-6
+              h-10
+              rounded-full
+              border
+              border-cyan-400/60
+              animate-bounce
+              flex
+              items-start
+              justify-center
+              p-1
+              mt-2
+            "
+          >
             <div className="w-1.5 h-1.5 rounded-full bg-cyan-400" />
           </div>
+
+          {/* BUTTON */}
           <div className="-mt-3">
-          <Buttons>start line</Buttons>
+            <Buttons>start line</Buttons>
           </div>
+
         </div>
       </motion.div>
     </div>
