@@ -65,8 +65,7 @@ export default function Skills() {
       </p>
 
       {/* CARDS */}
-      <div className="mt-16 sm:mt-20 flex flex-wrap gap-6 sm:gap-10 items-center justify-center max-w-5xl">
-        
+      <div className="mt-16  sm:mt-20 flex flex-wrap gap-6 sm:gap-10 items-center justify-center max-w-5xl">
         {/* HTML */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}

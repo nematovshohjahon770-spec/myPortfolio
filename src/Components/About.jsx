@@ -109,26 +109,17 @@ export default function About() {
 
             <p className="pl-4 sm:pl-6">
               <span className="text-teal-300">name:</span>{" "}
-              <span className="text-amber-500">
-                "Nematov Shohjahon"
-              </span>
-              ,
+              <span className="text-amber-500">"Nematov Shohjahon"</span>,
             </p>
 
             <p className="pl-4 sm:pl-6">
               <span className="text-teal-300">role:</span>{" "}
-              <span className="text-amber-500">
-                "Frontend Developer"
-              </span>
-              ,
+              <span className="text-amber-500">"Frontend Developer"</span>,
             </p>
 
             <p className="pl-4 sm:pl-6">
               <span className="text-teal-300">experience:</span>{" "}
-              <span className="text-amber-500 font-bold">
-                "1+ year"
-              </span>
-              ,
+              <span className="text-amber-500 font-bold">"1+ year"</span>,
             </p>
 
             <p className="pl-4 sm:pl-6">
@@ -145,11 +136,10 @@ export default function About() {
             </p>
 
             <p className="pl-6 sm:pl-12 text-gray-100 whitespace-normal">
-              I don't just build interfaces — I make them feel
-              effortless. I work with React, Tailwind CSS, and modern
-              frontend architecture to deliver both speed and polish.
-              Clean, readable code isn't just a preference for me —
-              it's a principle.
+              I don't just build interfaces — I make them feel effortless. I
+              work with React, Tailwind CSS, and modern frontend architecture to
+              deliver both speed and polish. Clean, readable code isn't just a
+              preference for me — it's a principle.
             </p>
 
             <p className="pl-4 sm:pl-6">
@@ -158,17 +148,9 @@ export default function About() {
 
             <p className="pl-4 sm:pl-6">
               <span className="text-teal-300">specialties:</span>{" "}
-              <span className="text-amber-500">
-                ["React"
-              </span>
-              ,{" "}
-              <span className="text-amber-500">
-                "Node.js"
-              </span>
-              ,{" "}
-              <span className="text-amber-500">
-                "Cloud Architecture"]
-              </span>
+              <span className="text-amber-500">["React"</span>,{" "}
+              <span className="text-amber-500">"Node.js"</span>,{" "}
+              <span className="text-amber-500">"Cloud Architecture"]</span>
             </p>
 
             <p className="text-gray-300">{"};"}</p>
@@ -255,9 +237,7 @@ export default function About() {
             12+
           </h2>
 
-          <p className="text-[10px] sm:text-xs font-mono text-white">
-            Clients
-          </p>
+          <p className="text-[10px] sm:text-xs font-mono text-white">Clients</p>
         </motion.div>
 
         {/* COFFEE */}

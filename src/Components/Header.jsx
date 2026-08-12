@@ -62,10 +62,8 @@ function CodeColumn({ lines, align = "left" }) {
 export default function DeveloperHero() {
   return (
     <div className="relative w-full min-h-screen bg-[#040608] overflow-hidden flex items-center justify-center">
-
       {/* CODE BACKGROUND */}
       <div className="absolute inset-0 flex justify-between px-6 py-10 opacity-70 pointer-events-none overflow-hidden">
-
         <div className="hidden sm:block">
           <CodeColumn lines={leftCode} align="left" />
         </div>
@@ -73,7 +71,6 @@ export default function DeveloperHero() {
         <div className="hidden sm:block">
           <CodeColumn lines={rightCode} align="right" />
         </div>
-
       </div>
 
       {/* DARK RADIAL BACKGROUND */}
@@ -141,10 +138,8 @@ export default function DeveloperHero() {
           w-full
         "
       >
-
         {/* FRONT-END */}
         <div className="flex items-center justify-center gap-2 sm:gap-5">
-
           <h2
             className="
               text-5xl
@@ -178,7 +173,6 @@ export default function DeveloperHero() {
           >
             End
           </h2>
-
         </div>
 
         {/* DEVELOPER */}
@@ -204,7 +198,6 @@ export default function DeveloperHero() {
 
         {/* BOTTOM CONTENT */}
         <div className="mt-5 flex flex-col items-center">
-
           <span
             className="
               text-[10px]
@@ -253,7 +246,6 @@ export default function DeveloperHero() {
           <div className="-mt-3">
             <Buttons>start line</Buttons>
           </div>
-
         </div>
       </motion.div>
     </div>
