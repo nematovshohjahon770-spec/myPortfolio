@@ -148,9 +148,12 @@ export default function About() {
 
             <p className="pl-4 sm:pl-6">
               <span className="text-teal-300">specialties:</span>{" "}
-              <span className="text-amber-500">["React"</span>,{" "}
-              <span className="text-amber-500">"Node.js"</span>,{" "}
-              <span className="text-amber-500">"Cloud Architecture"]</span>
+              <span className="text-amber-500">["Html3"</span>,{" "}
+              <span className="text-amber-500">"Css5"</span>,{" "}
+              <span className="text-amber-500">"React"</span>,{" "}
+              <span className="text-amber-500">"JavaScript"</span>,{" "}
+              <span className="text-amber-500">"TailwindCss"]</span>,
+
             </p>
 
             <p className="text-gray-300">{"};"}</p>
